@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://cybr4vqrcjls7" path="res://assets/fonts/Creepster-Regular.ttf" id="1_creepster"]
 [ext_resource type="FontFile" uid="uid://dtlgeqiq4yry5" path="res://assets/fonts/runewood.regular.ttf" id="2_runewood"]
+[ext_resource type="FontFile" uid="uid://bs22q4x1ej5ov" path="res://assets/fonts/Delfino.ttf" id="3_mj6x0"]
 [ext_resource type="Script" uid="uid://bbo4o2wkkvskq" path="res://scripts/interfaz_archivos.gd" id="3_script"]
 [ext_resource type="Script" path="res://scripts/file_slot.gd" id="4_slotscript"]
 [ext_resource type="Texture2D" uid="uid://cssadrh2ckvsu" path="res://assets/images/Captura de pantalla 2026-05-30 122846.png" id="5_q7s1u"]
@@ -17,13 +18,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_script")
+metadata/_edit_lock_ = true
 
 [node name="GeminiGeneratedImage953p8v953p8v953p" type="Sprite2D" parent="." unique_id=1133255482]
 z_index = -5
+use_parent_material = true
 position = Vector2(645.12506, 356.50003)
 scale = Vector2(0.90368426, 0.96875)
 texture = ExtResource("8_remy1")
-metadata/_edit_lock_ = true
 
 [node name="LabelTitle" type="Label" parent="." unique_id=659725889]
 layout_mode = 0
@@ -32,10 +34,10 @@ offset_top = 22.0
 offset_right = 1149.0
 offset_bottom = 74.275
 theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
-theme_override_colors/font_shadow_color = Color(0.1, 0.2, 0.6, 0.8)
+theme_override_colors/font_shadow_color = Color(0.9500981, 0.41568628, 0.95686275, 0.6901961)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_fonts/font = ExtResource("3_mj6x0")
 theme_override_font_sizes/font_size = 42
 text = "¿Qué archivo quieres?"
 horizontal_alignment = 1
@@ -57,8 +59,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -7.9999995
+offset_top = -52.999996
+offset_right = -8.0
+offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.185, 1.185)
 
 [node name="Slot1" type="Control" parent="SlotsRoot" unique_id=861032057]
 z_index = 2
@@ -103,8 +110,9 @@ offset_left = 4.0
 offset_top = 194.0
 offset_right = 208.0
 offset_bottom = 218.0
-theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.47294128, 0.039215695, 0.47843137, 1)
+theme_override_fonts/font = ExtResource("3_mj6x0")
 theme_override_font_sizes/font_size = 18
 text = "Archivo 1"
 
@@ -164,18 +172,6 @@ offset_right = 218.0
 offset_bottom = 189.0
 texture = ExtResource("5_q7s1u")
 expand_mode = 1
-
-[node name="LabelName" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=198915461]
-z_index = 2
-layout_mode = 0
-offset_left = 4.0
-offset_top = 194.0
-offset_right = 208.0
-offset_bottom = 218.0
-theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
-theme_override_font_sizes/font_size = 18
-text = "Archivo 1"
 
 [node name="LabelStatus" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=1280417625]
 z_index = 2
@@ -318,12 +314,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Imagen20260530150921370RemovebgPreview3" type="Sprite2D" parent="SlotsRoot/Slot3/FramePanel" unique_id=279946948]
+z_index = 5
+position = Vector2(112.96982, 91.268616)
+scale = Vector2(0.38631108, 0.4220065)
+texture = ExtResource("7_remy1")
+
 [node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot3/FramePanel" unique_id=278134010]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 212.0
-offset_bottom = 168.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 220.0
+offset_bottom = 179.0
 texture = ExtResource("5_q7s1u")
 expand_mode = 1
 
@@ -391,12 +393,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Imagen20260530150921370RemovebgPreview4" type="Sprite2D" parent="SlotsRoot/SlotOpciones/FramePanel" unique_id=1141834055]
+z_index = 5
+position = Vector2(109.92828, 91.5)
+scale = Vector2(0.3756147, 0.4348837)
+texture = ExtResource("7_remy1")
+
 [node name="PreviewRect" type="TextureRect" parent="SlotsRoot/SlotOpciones/FramePanel" unique_id=459054112]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 211.0
-offset_bottom = 178.0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 215.0
+offset_bottom = 183.0
 texture = ExtResource("7_tcxgq")
 expand_mode = 1
 
@@ -437,13 +445,3 @@ offset_bottom = 172.0
 
 [node name="PopupLayer" type="CanvasLayer" parent="." unique_id=462150541]
 layer = 10
-
-[node name="Imagen20260530150921370RemovebgPreview4" type="Sprite2D" parent="." unique_id=1141834055]
-position = Vector2(811.8888, 414.54742)
-scale = Vector2(0.36885425, 0.4316474)
-texture = ExtResource("7_remy1")
-
-[node name="Imagen20260530150921370RemovebgPreview3" type="Sprite2D" parent="." unique_id=279946948]
-position = Vector2(487.8457, 357.02905)
-scale = Vector2(0.36864173, 0.40228757)
-texture = ExtResource("7_remy1")
