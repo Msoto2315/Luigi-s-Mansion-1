@@ -21,7 +21,6 @@ func _ready() -> void:
 	_load_save_data()
 	for i in 3: _slots[i].setup(_save_data[i])
 	for i in _slots.size(): _slots[i].slot_selected.connect(_on_slot_selected)
-	btn_volver.pressed.connect(func(): TransitionManager.transition_to(SCENE_MAIN_MENU))
 	_animate_entrance()
 	set_process_unhandled_input(true)
 
