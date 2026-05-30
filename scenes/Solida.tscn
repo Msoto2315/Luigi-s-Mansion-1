@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c1gx40ksr6bl"]
+
+[ext_resource type="Script" uid="uid://b2lrgjhwo0ohy" path="res://scripts/model_breaker.gd" id="1_aut32"]
+[ext_resource type="PackedScene" uid="uid://n3na41dla2ej" path="res://assets/models/Pillar/Normal/Pilastra.glb" id="2_vhnrl"]
+[ext_resource type="Script" uid="uid://dqitki2xxumpg" path="res://addons/destruction/destruction.gd" id="3_x2hvc"]
+[ext_resource type="PackedScene" uid="uid://cdsp5l2dvm0y5" path="res://assets/models/Pillar/Fracture/Pilastra Fracture.glb" id="4_g8rct"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_break_detector"]
+size = Vector3(2.6, 2.6, 3.6)
+
+[node name="PilastraSolida" type="Node3D" unique_id=1950730304]
+script = ExtResource("1_aut32")
+trigger_groups = PackedStringArray("Bomba", "Bomb", "Player", "Browser", "Bowser")
+trigger_name_parts = PackedStringArray("bomba", "bomb", "player", "browser", "bowser")
+
+[node name="Pilastra" parent="." unique_id=568878718 instance=ExtResource("2_vhnrl")]
+
+[node name="BreakDetector" type="Area3D" parent="." unique_id=1114219650]
+collision_layer = 0
+collision_mask = 4294967295
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakDetector" unique_id=1132839704]
+shape = SubResource("BoxShape3D_break_detector")
+
+[node name="Destruction" type="Node" parent="." unique_id=608108030 node_paths=PackedStringArray("shard_container")]
+script = ExtResource("3_x2hvc")
+fragmented = ExtResource("4_g8rct")
+shard_container = NodePath("../..")

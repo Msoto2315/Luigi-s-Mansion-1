@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://85cjgiwnrtg6"]
+
+[ext_resource type="PackedScene" uid="uid://dwsyt4pslnv0d" path="res://assets/models/Roof/Roof_Luigi's Mansion.glb" id="1_roof"]
+[ext_resource type="Material" uid="uid://5nbiomhwc3cw" path="res://assets/materials/ethereal_fire_material.tres" id="2_firemat"]
+[ext_resource type="Material" uid="uid://bo4eaj65i2742" path="res://assets/materials/fire_aurora_overlay_material.tres" id="3_aurora"]
+[ext_resource type="PackedScene" uid="uid://b6uyi533vawsm" path="res://scenes/Test_Player_Ball.tscn" id="5_test_player"]
+[ext_resource type="PackedScene" uid="uid://c1gx40ksr6bl" path="res://scenes/Solida.tscn" id="6_pillar"]
+
+[sub_resource type="Environment" id="Environment_hnfmu"]
+background_mode = 1
+background_energy_multiplier = 0.0
+ambient_light_source = 1
+ambient_light_color = Color(0.55, 0.42, 0.3, 1)
+ambient_light_energy = 2.35
+glow_enabled = true
+glow_intensity = 0.16
+glow_strength = 0.28
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ethereal_fire"]
+top_radius = 1.0
+bottom_radius = 1.0
+radial_segments = 96
+rings = 24
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_fire_aurora"]
+size = Vector2(160, 80)
+
+[node name="Entorno" type="Node3D" unique_id=581540449]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=262720433]
+environment = SubResource("Environment_hnfmu")
+
+[node name="Roof_Luigi\'s Mansion" parent="." unique_id=969283941 instance=ExtResource("1_roof")]
+transform = Transform3D(0.485, 0, 0, 0, 0.43, 0, 0, 0, 0.365, 39.292473, -161.57819, 142.11275)
+
+[node name="TestPlayerBall" parent="." unique_id=2104617123 instance=ExtResource("5_test_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.33862, 655, -375)
+
+[node name="EtherealFireCylinder" type="MeshInstance3D" parent="." unique_id=1432082219]
+transform = Transform3D(3000, 0, 0, 0, 1200, 0, 0, 0, 900, 56.647636, 845.40894, -275.2805)
+material_override = ExtResource("2_firemat")
+transparency = 1.0
+mesh = SubResource("CylinderMesh_ethereal_fire")
+
+[node name="EtherealFireCylinder2" type="MeshInstance3D" parent="." unique_id=1112060868]
+transform = Transform3D(3000, 0, 0, 0, 1200, 0, 0, 0, 900, 57.04046, 845.4088, -280.00827)
+material_override = ExtResource("2_firemat")
+transparency = 1.0
+mesh = SubResource("CylinderMesh_ethereal_fire")
+
+[node name="FireAuroraBack" type="MeshInstance3D" parent="." unique_id=2076153601]
+transform = Transform3D(71.166, 0, 0, 0, 30, 0, 0, 0, 55.386, 49.835327, 1004.8728, -1302.1609)
+material_override = ExtResource("3_aurora")
+mesh = SubResource("QuadMesh_fire_aurora")
+
+[node name="FireAuroraBack2" type="MeshInstance3D" parent="." unique_id=1694425622]
+transform = Transform3D(8.500588, 0, -16.717953, -0.32560962, 18.751442, -0.16556294, 16.714783, 0.36528438, 8.498977, -2416.5444, 1004.8728, -382.1109)
+material_override = ExtResource("3_aurora")
+mesh = SubResource("QuadMesh_fire_aurora")
+
+[node name="FireAuroraBack3" type="MeshInstance3D" parent="." unique_id=637699517]
+transform = Transform3D(8.500588, 0, -16.717953, -0.32560962, 18.751442, -0.16556294, 16.714783, 0.36528438, 8.498977, 2162.5498, 1004.8728, -382.1109)
+material_override = ExtResource("3_aurora")
+mesh = SubResource("QuadMesh_fire_aurora")
+
+[node name="RoofKeyLight" type="DirectionalLight3D" parent="." unique_id=1473468332]
+transform = Transform3D(0.7538294, -0.65706605, 0.0023284722, 0.48231825, 0.55574685, 0.67713726, -0.4462179, -0.5093229, 0.7358532, 145.23062, 706.1975, 52.994873)
+light_color = Color(0.87613064, 0.84712654, 0.8283272, 1)
+light_energy = 1.958
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 12.966
+light_angular_distance = 90.0
+
+[node name="Pillar1" parent="." unique_id=961076928 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.38467, 0, 0.71046215, 0, 56.867996, 0, -0.71046215, 0, 47.38467, -1331.7987, 606.02936, -425.36877)
+
+[node name="Pillar7" parent="." unique_id=1950730304 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, -1317.5605, 606.02936, -64.96707)
+
+[node name="Pillar2" parent="." unique_id=774625474 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, -826.48834, 604.0831, -428.39392)
+
+[node name="Pillar8" parent="." unique_id=1750303552 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, -826.48834, 604.0831, -53.501923)
+
+[node name="Pillar3" parent="." unique_id=348891168 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, -333.71826, 611.76886, -414.13028)
+
+[node name="Pillar9" parent="." unique_id=819876161 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, -342.61694, 611.76886, -72.03788)
+
+[node name="Pillar4" parent="." unique_id=1256824687 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, 411.75122, 610.3843, -422.69812)
+
+[node name="Pillar10" parent="." unique_id=1682468505 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, 399.29272, 610.3843, -60.516808)
+
+[node name="Pillar5" parent="." unique_id=1550743239 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, 891.60693, 610.3843, -424.4779)
+
+[node name="Pillar11" parent="." unique_id=1768501648 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, 896.9463, 610.3843, -64.84012)
+
+[node name="Pillar6" parent="." unique_id=554356236 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, 1377.8184, 610.3843, -428.59872)
+
+[node name="Pillar12" parent="." unique_id=1977088431 instance=ExtResource("6_pillar")]
+transform = Transform3D(47.39, 0, 0, 0, 56.868, 0, 0, 0, 47.39, 1377.8184, 610.3843, -62.365997)

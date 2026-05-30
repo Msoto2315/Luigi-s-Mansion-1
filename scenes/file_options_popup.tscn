@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://ci5lcvpscc83y"]
+
+[ext_resource type="FontFile" uid="uid://cybr4vqrcjls7" path="res://assets/fonts/Creepster-Regular.ttf" id="1_creepster"]
+[ext_resource type="Script" path="res://scripts/file_options_popup.gd" id="2_script"]
+[ext_resource type="Texture2D" uid="uid://cq0dkx4wlipxr" path="res://assets/images/imagen_2026-05-30_155727282.jpeg" id="3_55s8j"]
+
+[node name="FileOptionsPopup" type="Control" unique_id=781036709]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_script")
+metadata/_edit_lock_ = true
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=1281775408]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.55)
+metadata/_edit_lock_ = true
+
+[node name="PopupContainer" type="Control" parent="." unique_id=910369071]
+anchors_preset = 0
+offset_left = 34.0
+offset_top = 105.0
+offset_right = 664.4208
+offset_bottom = 389.1424
+scale = Vector2(1.715, 1.715)
+
+[node name="SlotPreview" type="Panel" parent="PopupContainer" unique_id=2131313639]
+layout_mode = 0
+offset_left = -1.1661811
+offset_top = 20.991255
+offset_right = 188.83382
+offset_bottom = 220.99126
+
+[node name="PreviewImage" type="TextureRect" parent="PopupContainer/SlotPreview" unique_id=2021281086]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 184.0
+offset_bottom = 154.0
+expand_mode = 1
+stretch_mode = 6
+
+[node name="LabelArchivo" type="Label" parent="PopupContainer/SlotPreview" unique_id=2134832344]
+layout_mode = 0
+offset_top = 158.0
+offset_right = 190.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.95, 0.95, 0.75, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 22
+text = "Archivo 1"
+horizontal_alignment = 1
+
+[node name="ButtonsPanel" type="Panel" parent="PopupContainer" unique_id=1160599806]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 610.0
+offset_bottom = 240.0
+
+[node name="VBox" type="VBoxContainer" parent="PopupContainer/ButtonsPanel" unique_id=1143987096]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 402.0
+offset_bottom = 232.0
+theme_override_constants/separation = 4
+
+[node name="BtnStart" type="Button" parent="PopupContainer/ButtonsPanel/VBox" unique_id=1384455677]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
+theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 30
+text = "Comenzar"
+flat = true
+alignment = 0
+
+[node name="BtnCopy" type="Button" parent="PopupContainer/ButtonsPanel/VBox" unique_id=872981283]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
+theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 30
+text = "Copiar datos"
+flat = true
+alignment = 0
+
+[node name="BtnDelete" type="Button" parent="PopupContainer/ButtonsPanel/VBox" unique_id=1117267650]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
+theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 30
+text = "Borrar archivo"
+flat = true
+alignment = 0
+
+[node name="BtnOptions" type="Button" parent="PopupContainer/ButtonsPanel/VBox" unique_id=1654201728]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
+theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 30
+text = "Opciones"
+flat = true
+alignment = 0
+
+[node name="Imagen20260530155727282" type="Sprite2D" parent="PopupContainer/ButtonsPanel/VBox" unique_id=2018273638]
+z_index = -5
+position = Vector2(108.618095, 125.52771)
+scale = Vector2(0.6639486, 0.62575555)
+texture = ExtResource("3_55s8j")
+
+[node name="SelectArrow" type="Label" parent="PopupContainer/ButtonsPanel" unique_id=1902322598]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 10.0
+offset_right = 410.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.25, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 30
+text = "◄"

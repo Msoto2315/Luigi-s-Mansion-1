@@ -1,0 +1,453 @@
+[gd_scene format=3 uid="uid://b8y1a2m3c4d5e"]
+
+[ext_resource type="FontFile" uid="uid://cybr4vqrcjls7" path="res://assets/fonts/Creepster-Regular.ttf" id="1_creepster"]
+[ext_resource type="FontFile" uid="uid://dtlgeqiq4yry5" path="res://assets/fonts/runewood.regular.ttf" id="2_runewood"]
+[ext_resource type="Script" uid="uid://bbo4o2wkkvskq" path="res://scripts/interfaz_archivos.gd" id="3_script"]
+[ext_resource type="Script" path="res://scripts/file_slot.gd" id="4_slotscript"]
+[ext_resource type="Texture2D" uid="uid://cssadrh2ckvsu" path="res://assets/images/Captura de pantalla 2026-05-30 122846.png" id="5_q7s1u"]
+[ext_resource type="Texture2D" uid="uid://d1c5ifmpew1fg" path="res://assets/images/imagen_2026-05-30_150921370-removebg-preview.png" id="7_remy1"]
+[ext_resource type="Texture2D" uid="uid://bf07hgu7y0qtf" path="res://assets/images/E_Gadd_Outside_Lab_LM.png" id="7_tcxgq"]
+[ext_resource type="Texture2D" uid="uid://d3b2oo3874ec4" path="res://assets/images/Gemini_Generated_Image_953p8v953p8v953p.png" id="8_remy1"]
+
+[node name="InterfazArchivos" type="Control" unique_id=314809779]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_script")
+
+[node name="LabelTitle" type="Label" parent="." unique_id=659725889]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 22.0
+offset_right = 1149.0
+offset_bottom = 74.275
+theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
+theme_override_colors/font_shadow_color = Color(0.1, 0.2, 0.6, 0.8)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 42
+text = "¿Qué archivo quieres?"
+horizontal_alignment = 1
+
+[node name="LabelSub" type="Label" parent="." unique_id=1825585663]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 86.0
+offset_right = 1063.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.8, 0.82, 0.88, 1)
+theme_override_fonts/font = ExtResource("2_runewood")
+theme_override_font_sizes/font_size = 22
+text = "Pasa, la mansión es tuya..."
+horizontal_alignment = 1
+
+[node name="SlotsRoot" type="Control" parent="." unique_id=341601049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot1" type="Control" parent="SlotsRoot" unique_id=861032057]
+z_index = 1
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 120.0
+offset_right = 280.0
+offset_bottom = 300.0
+pivot_offset = Vector2(110, 90)
+script = ExtResource("4_slotscript")
+
+[node name="Imagen20260530150921370RemovebgPreview" type="Sprite2D" parent="SlotsRoot/Slot1" unique_id=2103552601]
+z_index = 6
+position = Vector2(110.50001, 93.999985)
+scale = Vector2(0.3982759, 0.4465117)
+texture = ExtResource("7_remy1")
+
+[node name="FramePanel" type="Panel" parent="SlotsRoot/Slot1" unique_id=1843649764]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot1/FramePanel" unique_id=2127437977]
+z_index = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 219.0
+offset_bottom = 189.0
+texture = ExtResource("5_q7s1u")
+expand_mode = 1
+
+[node name="LabelName" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=1152967393]
+z_index = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 194.0
+offset_right = 208.0
+offset_bottom = 218.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 18
+text = "Archivo 1"
+
+[node name="LabelStatus" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=887971421]
+z_index = 1
+layout_mode = 0
+offset_left = 53.0
+offset_top = 75.0
+offset_right = 168.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 19
+text = "Partida nueva"
+
+[node name="LabelGhosts" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=35266266]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 146.0
+offset_right = 110.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "👻 0/50"
+
+[node name="LabelMoney" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=696717168]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 112.0
+offset_top = 146.0
+offset_right = 212.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "0 T"
+
+[node name="FramePanel" type="Panel" parent="SlotsRoot/Slot1/FramePanel" unique_id=2095772920]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=1043523169]
+z_index = 1
+layout_mode = 0
+offset_top = 2.0
+offset_right = 218.0
+offset_bottom = 189.0
+texture = ExtResource("5_q7s1u")
+expand_mode = 1
+
+[node name="LabelName" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=198915461]
+z_index = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 194.0
+offset_right = 208.0
+offset_bottom = 218.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 18
+text = "Archivo 1"
+
+[node name="LabelStatus" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=1280417625]
+z_index = 1
+layout_mode = 0
+offset_left = 53.0
+offset_top = 75.0
+offset_right = 168.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 19
+text = "Partida nueva"
+
+[node name="LabelGhosts" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=1042959767]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 146.0
+offset_right = 110.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "👻 0/50"
+
+[node name="LabelMoney" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=84174123]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 112.0
+offset_top = 146.0
+offset_right = 212.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "0 T"
+
+[node name="Slot2" type="Control" parent="SlotsRoot" unique_id=484451244]
+anchors_preset = 0
+offset_left = 220.0
+offset_top = 195.0
+offset_right = 440.0
+offset_bottom = 375.0
+pivot_offset = Vector2(110, 90)
+script = ExtResource("4_slotscript")
+slot_index = 1
+
+[node name="FramePanel" type="Panel" parent="SlotsRoot/Slot2" unique_id=1528165254]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot2/FramePanel" unique_id=1473549254]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 174.0
+texture = ExtResource("5_q7s1u")
+expand_mode = 1
+
+[node name="LabelName" type="Label" parent="SlotsRoot/Slot2/FramePanel" unique_id=199164188]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 187.0
+offset_right = 206.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 18
+text = "Archivo 2"
+
+[node name="LabelStatus" type="Label" parent="SlotsRoot/Slot2/FramePanel" unique_id=538679290]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 79.0
+offset_right = 174.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 19
+text = "Partida nueva"
+
+[node name="LabelGhosts" type="Label" parent="SlotsRoot/Slot2/FramePanel" unique_id=1441583217]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 146.0
+offset_right = 110.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "👻 0/50"
+
+[node name="LabelMoney" type="Label" parent="SlotsRoot/Slot2/FramePanel" unique_id=1596577540]
+visible = false
+layout_mode = 0
+offset_left = 112.0
+offset_top = 146.0
+offset_right = 212.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "0 T"
+
+[node name="Slot3" type="Control" parent="SlotsRoot" unique_id=980067751]
+anchors_preset = 0
+offset_left = 380.0
+offset_top = 270.0
+offset_right = 600.0
+offset_bottom = 450.0
+pivot_offset = Vector2(110, 90)
+script = ExtResource("4_slotscript")
+slot_index = 2
+
+[node name="FramePanel" type="Panel" parent="SlotsRoot/Slot3" unique_id=1140222040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot3/FramePanel" unique_id=278134010]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 168.0
+texture = ExtResource("5_q7s1u")
+expand_mode = 1
+
+[node name="LabelName" type="Label" parent="SlotsRoot/Slot3/FramePanel" unique_id=1928176116]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 176.0
+offset_right = 210.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 18
+text = "Archivo 3"
+
+[node name="LabelStatus" type="Label" parent="SlotsRoot/Slot3/FramePanel" unique_id=16706612]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 74.0
+offset_right = 173.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 19
+text = "Partida nueva"
+
+[node name="LabelGhosts" type="Label" parent="SlotsRoot/Slot3/FramePanel" unique_id=1334211991]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 146.0
+offset_right = 110.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "👻 0/50"
+
+[node name="LabelMoney" type="Label" parent="SlotsRoot/Slot3/FramePanel" unique_id=1379867417]
+visible = false
+layout_mode = 0
+offset_left = 112.0
+offset_top = 146.0
+offset_right = 212.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 15
+text = "0 T"
+
+[node name="SlotOpciones" type="Control" parent="SlotsRoot" unique_id=623734479]
+anchors_preset = 0
+offset_left = 700.0
+offset_top = 320.0
+offset_right = 920.0
+offset_bottom = 500.0
+pivot_offset = Vector2(110, 90)
+script = ExtResource("4_slotscript")
+slot_index = 3
+
+[node name="FramePanel" type="Panel" parent="SlotsRoot/SlotOpciones" unique_id=1228276007]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PreviewRect" type="TextureRect" parent="SlotsRoot/SlotOpciones/FramePanel" unique_id=459054112]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 211.0
+offset_bottom = 178.0
+texture = ExtResource("7_tcxgq")
+expand_mode = 1
+
+[node name="LabelName" type="Label" parent="SlotsRoot/SlotOpciones/FramePanel" unique_id=1580700307]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 186.0
+offset_right = 208.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 20
+text = "Opciones"
+
+[node name="LabelStatus" type="Label" parent="SlotsRoot/SlotOpciones/FramePanel" unique_id=31522895]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 146.0
+offset_right = 212.0
+offset_bottom = 172.0
+
+[node name="LabelGhosts" type="Label" parent="SlotsRoot/SlotOpciones/FramePanel" unique_id=749471314]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 146.0
+offset_right = 110.0
+offset_bottom = 172.0
+
+[node name="LabelMoney" type="Label" parent="SlotsRoot/SlotOpciones/FramePanel" unique_id=1833491307]
+visible = false
+layout_mode = 0
+offset_left = 112.0
+offset_top = 146.0
+offset_right = 212.0
+offset_bottom = 172.0
+
+[node name="BtnVolver" type="Button" parent="." unique_id=1034051403]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 590.0
+offset_right = 200.0
+offset_bottom = 630.0
+theme_override_colors/font_color = Color(0.85, 0.15, 0.15, 1)
+theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_font_sizes/font_size = 24
+text = "◄ VOLVER"
+flat = true
+
+[node name="PopupLayer" type="CanvasLayer" parent="." unique_id=462150541]
+layer = 10
+
+[node name="Imagen20260530150921370RemovebgPreview4" type="Sprite2D" parent="." unique_id=1141834055]
+position = Vector2(811.8888, 414.54742)
+scale = Vector2(0.36885425, 0.4316474)
+texture = ExtResource("7_remy1")
+
+[node name="Imagen20260530150921370RemovebgPreview3" type="Sprite2D" parent="." unique_id=279946948]
+position = Vector2(487.8457, 357.02905)
+scale = Vector2(0.36864173, 0.40228757)
+texture = ExtResource("7_remy1")
+
+[node name="Imagen20260530150921370RemovebgPreview2" type="Sprite2D" parent="." unique_id=1395886334]
+position = Vector2(329.2896, 285.8296)
+scale = Vector2(0.37732214, 0.41714835)
+texture = ExtResource("7_remy1")
+
+[node name="GeminiGeneratedImage953p8v953p8v953p" type="Sprite2D" parent="." unique_id=1133255482]
+z_index = -5
+position = Vector2(645.12506, 356.50003)
+scale = Vector2(0.90368426, 0.96875)
+texture = ExtResource("8_remy1")
