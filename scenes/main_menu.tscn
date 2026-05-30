@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dtearvkk4m1mg"]
+
+[ext_resource type="Texture2D" uid="uid://dvwcdbndn1yc2" path="res://assets/images/Gemini_Generated_Image_iubqljiubqljiubq-Photoroom.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://lm1abqamnkg0" path="res://assets/images/Luigi's_Mansion_Logo.png" id="2_ekxnf"]
+[ext_resource type="Material" uid="uid://4liv2uxhwvl8" path="res://assets/materials/logo_blur_material.tres" id="3_8ln24"]
+[ext_resource type="Script" uid="uid://r3oqj02qq431" path="res://scripts/main_menu.gd" id="4_script"]
+[ext_resource type="FontFile" uid="uid://dtlgeqiq4yry5" path="res://assets/fonts/runewood.regular.ttf" id="4_wu84c"]
+
+[node name="MainMenu" type="Control" unique_id=989268622]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_script")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1377714430]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -17.0
+offset_right = 40.95923
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.98, 0.74)
+texture = ExtResource("1_l6cm7")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=896014038]
+material = ExtResource("3_8ln24")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.0
+offset_top = -241.0
+offset_right = 499.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(499, 197.5)
+texture = ExtResource("2_ekxnf")
+
+[node name="Button" type="Button" parent="." unique_id=2028843752]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.776
+anchor_right = 0.5
+anchor_bottom = 0.776
+offset_left = -172.0
+offset_top = -25.848022
+offset_right = 263.0
+offset_bottom = 49.231934
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.68)
+theme_override_colors/font_color = Color(0.9112206, 0, 0.18102586, 1)
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 55
+text = "PRESS START!"
+flat = true
