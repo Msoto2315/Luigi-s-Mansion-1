@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://ci5lcvpscc83y"]
 
-[ext_resource type="FontFile" uid="uid://cybr4vqrcjls7" path="res://assets/fonts/Creepster-Regular.ttf" id="1_creepster"]
 [ext_resource type="Script" path="res://scripts/file_options_popup.gd" id="2_script"]
 [ext_resource type="Texture2D" uid="uid://cq0dkx4wlipxr" path="res://assets/images/imagen_2026-05-30_155727282.jpeg" id="3_55s8j"]
+[ext_resource type="FontFile" uid="uid://bs22q4x1ej5ov" path="res://assets/fonts/Delfino.ttf" id="3_o3j1j"]
+[ext_resource type="Texture2D" uid="uid://d1c5ifmpew1fg" path="res://assets/images/imagen_2026-05-30_150921370-removebg-preview.png" id="4_fl2st"]
 
 [node name="FileOptionsPopup" type="Control" unique_id=781036709]
 layout_mode = 3
@@ -41,23 +42,25 @@ offset_bottom = 220.99126
 
 [node name="PreviewImage" type="TextureRect" parent="PopupContainer/SlotPreview" unique_id=2021281086]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 6.0
-offset_right = 184.0
-offset_bottom = 154.0
+offset_left = -4.6647224
+offset_top = 3.4985504
+offset_right = 190.67055
+offset_bottom = 201.74927
 expand_mode = 1
 stretch_mode = 6
 
 [node name="LabelArchivo" type="Label" parent="PopupContainer/SlotPreview" unique_id=2134832344]
 layout_mode = 0
-offset_top = 158.0
+offset_top = 162.09912
 offset_right = 190.0
-offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.95, 0.95, 0.75, 1)
+offset_bottom = 204.09912
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("3_o3j1j")
 theme_override_font_sizes/font_size = 22
 text = "Archivo 1"
 horizontal_alignment = 1
@@ -80,14 +83,13 @@ theme_override_constants/separation = 4
 custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
-theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_colors/font_color = Color(0.2509804, 0.9019608, 1, 1)
+theme_override_colors/font_focus_color = Color(0.2509804, 0.9019608, 1, 1)
+theme_override_colors/font_hover_color = Color(0.006445296, 0.008991511, 0.009374976, 1)
+theme_override_fonts/font = ExtResource("3_o3j1j")
 theme_override_font_sizes/font_size = 30
 text = "Comenzar"
 flat = true
-alignment = 0
 
 [node name="BtnCopy" type="Button" parent="PopupContainer/ButtonsPanel/VBox" unique_id=872981283]
 custom_minimum_size = Vector2(0, 52)
@@ -96,11 +98,10 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
 theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_fonts/font = ExtResource("3_o3j1j")
 theme_override_font_sizes/font_size = 30
 text = "Copiar datos"
 flat = true
-alignment = 0
 
 [node name="BtnDelete" type="Button" parent="PopupContainer/ButtonsPanel/VBox" unique_id=1117267650]
 custom_minimum_size = Vector2(0, 52)
@@ -109,11 +110,10 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
 theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_fonts/font = ExtResource("3_o3j1j")
 theme_override_font_sizes/font_size = 30
 text = "Borrar archivo"
 flat = true
-alignment = 0
 
 [node name="BtnOptions" type="Button" parent="PopupContainer/ButtonsPanel/VBox" unique_id=1654201728]
 custom_minimum_size = Vector2(0, 52)
@@ -122,11 +122,10 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_focus_color = Color(0.25, 0.9, 1, 1)
 theme_override_colors/font_hover_color = Color(0.25, 0.9, 1, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_fonts/font = ExtResource("3_o3j1j")
 theme_override_font_sizes/font_size = 30
 text = "Opciones"
 flat = true
-alignment = 0
 
 [node name="Imagen20260530155727282" type="Sprite2D" parent="PopupContainer/ButtonsPanel/VBox" unique_id=2018273638]
 z_index = -5
@@ -134,13 +133,8 @@ position = Vector2(108.618095, 125.52771)
 scale = Vector2(0.6639486, 0.62575555)
 texture = ExtResource("3_55s8j")
 
-[node name="SelectArrow" type="Label" parent="PopupContainer/ButtonsPanel" unique_id=1902322598]
-layout_mode = 0
-offset_left = 370.0
-offset_top = 10.0
-offset_right = 410.0
-offset_bottom = 58.0
-theme_override_colors/font_color = Color(0.25, 0.9, 1, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
-theme_override_font_sizes/font_size = 30
-text = "◄"
+[node name="Imagen20260530150921370RemovebgPreview" type="Sprite2D" parent="." unique_id=254619300]
+z_index = 15
+position = Vector2(194.00002, 315.5)
+scale = Vector2(0.6103448, 0.83488375)
+texture = ExtResource("4_fl2st")

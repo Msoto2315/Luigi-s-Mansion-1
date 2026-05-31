@@ -9,44 +9,19 @@ const SLOT_REST_Y     := [120.0, 195.0, 270.0, 320.0]
 @onready var slots_root  : Control     = $SlotsRoot
 @onready var popup_layer : CanvasLayer = $PopupLayer
 @onready var btn_volver  : Button      = $BtnVolver
-@onready var label_title : Label       = $LabelTitle
-@onready var label_sub   : Label       = $LabelSub
 
 var _slots          : Array[Control]    = []
 var _selected_index : int               = 0
 var _save_data      : Array[Dictionary] = []
 var _popup_open     : bool              = false
 var _popup_instance : Control           = null
-var glow_time       : float             = 0.0
-var _sub_toggle     : bool              = false
-
-func _process(delta: float) -> void:
-	glow_time += delta
-	var pulse := 0.0 + ((sin(glow_time * 1.2) + 1.0) * 0.425)
-	label_title.add_theme_color_override("font_shadow_color", Color(0.8, 0.0, 0.8, pulse))
-	label_title.queue_redraw()
-	label_sub.modulate.a = pulse
-	
-	if pulse < 0.01 and not _sub_toggle:
-		_sub_toggle = true
-		if label_sub.text == "Pasa, la mansión es tuya...":
-			label_sub.text = "Pasa, la mansión es nuestra..."
-		else:
-			label_sub.text = "Pasa, la mansión es tuya..."
-	elif pulse > 0.75:
-		_sub_toggle = false
 
 func _ready() -> void:
-	label_title.add_theme_color_override("font_shadow_color", Color(0.8, 0.0, 0.8, 1.0))
-	label_title.add_theme_constant_override("shadow_offset_x", 0)
-	label_title.add_theme_constant_override("shadow_offset_y", 0)
-	label_title.add_theme_constant_override("shadow_outline_size", 35)
-	label_sub.modulate.a = 1.0
-	label_sub.text = "Pasa, la mansión es tuya..."
 	_slots = [slots_root.get_node("Slot1"), slots_root.get_node("Slot2"), slots_root.get_node("Slot3"), slots_root.get_node("SlotOpciones")]
 	_load_save_data()
 	for i in 3: _slots[i].setup(_save_data[i])
 	for i in _slots.size(): _slots[i].slot_selected.connect(_on_slot_selected)
+	btn_volver.pressed.connect(func(): TransitionManager.transition_to(SCENE_MAIN_MENU))
 	_animate_entrance()
 	set_process_unhandled_input(true)
 

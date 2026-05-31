@@ -20,11 +20,12 @@ grow_vertical = 2
 script = ExtResource("3_script")
 metadata/_edit_lock_ = true
 
-[node name="GeminiGeneratedImage953p8v953p8v953p" type="Sprite2D" parent="." unique_id=1133255482]
-z_index = -5
-use_parent_material = true
-position = Vector2(645.12506, 356.50003)
-scale = Vector2(0.90368426, 0.96875)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1400986226]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -2.0
+offset_right = 1419.0
+offset_bottom = 734.0
 texture = ExtResource("8_remy1")
 
 [node name="LabelTitle" type="Label" parent="." unique_id=659725889]
