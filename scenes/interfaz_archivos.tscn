@@ -68,7 +68,7 @@ grow_vertical = 2
 scale = Vector2(1.185, 1.185)
 
 [node name="Slot1" type="Control" parent="SlotsRoot" unique_id=861032057]
-z_index = 2
+z_index = 6
 anchors_preset = 0
 offset_left = 60.0
 offset_top = 120.0
@@ -78,13 +78,13 @@ pivot_offset = Vector2(110, 90)
 script = ExtResource("4_slotscript")
 
 [node name="Imagen20260530150921370RemovebgPreview" type="Sprite2D" parent="SlotsRoot/Slot1" unique_id=2103552601]
-z_index = 7
+z_index = 15
 position = Vector2(109.5, 94.999985)
 scale = Vector2(0.3948276, 0.45116284)
 texture = ExtResource("7_remy1")
 
 [node name="FramePanel" type="Panel" parent="SlotsRoot/Slot1" unique_id=1843649764]
-z_index = 2
+z_index = 6
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot1/FramePanel" unique_id=2127437977]
-z_index = 2
+z_index = 6
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -104,20 +104,19 @@ texture = ExtResource("5_q7s1u")
 expand_mode = 1
 
 [node name="LabelName" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=1152967393]
-z_index = 2
+z_index = 6
 layout_mode = 0
-offset_left = 4.0
-offset_top = 194.0
-offset_right = 208.0
-offset_bottom = 218.0
+offset_left = -3.4599123
+offset_top = 196.45572
+offset_right = 85.147675
+offset_bottom = 220.45572
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.47294128, 0.039215695, 0.47843137, 1)
 theme_override_fonts/font = ExtResource("3_mj6x0")
 theme_override_font_sizes/font_size = 18
 text = "Archivo 1"
 
 [node name="LabelStatus" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=887971421]
-z_index = 2
+z_index = 6
 layout_mode = 0
 offset_left = 53.0
 offset_top = 75.0
@@ -130,7 +129,7 @@ text = "Partida nueva"
 
 [node name="LabelGhosts" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=35266266]
 visible = false
-z_index = 2
+z_index = 6
 layout_mode = 0
 offset_left = 8.0
 offset_top = 146.0
@@ -143,64 +142,7 @@ text = "👻 0/50"
 
 [node name="LabelMoney" type="Label" parent="SlotsRoot/Slot1/FramePanel" unique_id=696717168]
 visible = false
-z_index = 2
-layout_mode = 0
-offset_left = 112.0
-offset_top = 146.0
-offset_right = 212.0
-offset_bottom = 172.0
-theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
-theme_override_font_sizes/font_size = 15
-text = "0 T"
-
-[node name="FramePanel" type="Panel" parent="SlotsRoot/Slot1/FramePanel" unique_id=2095772920]
-z_index = 2
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 6.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=1043523169]
-z_index = 2
-layout_mode = 0
-offset_top = 2.0
-offset_right = 218.0
-offset_bottom = 189.0
-texture = ExtResource("5_q7s1u")
-expand_mode = 1
-
-[node name="LabelStatus" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=1280417625]
-z_index = 2
-layout_mode = 0
-offset_left = 53.0
-offset_top = 75.0
-offset_right = 168.0
-offset_bottom = 100.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
-theme_override_font_sizes/font_size = 19
-text = "Partida nueva"
-
-[node name="LabelGhosts" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=1042959767]
-visible = false
-z_index = 2
-layout_mode = 0
-offset_left = 8.0
-offset_top = 146.0
-offset_right = 110.0
-offset_bottom = 172.0
-theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
-theme_override_font_sizes/font_size = 15
-text = "👻 0/50"
-
-[node name="LabelMoney" type="Label" parent="SlotsRoot/Slot1/FramePanel/FramePanel" unique_id=84174123]
-visible = false
-z_index = 2
+z_index = 6
 layout_mode = 0
 offset_left = 112.0
 offset_top = 146.0
@@ -223,13 +165,13 @@ script = ExtResource("4_slotscript")
 slot_index = 1
 
 [node name="Imagen20260530150921370RemovebgPreview2" type="Sprite2D" parent="SlotsRoot/Slot2" unique_id=1395886334]
-z_index = 5
+z_index = 6
 position = Vector2(109.49999, 91)
 scale = Vector2(0.39827582, 0.43720928)
 texture = ExtResource("7_remy1")
 
 [node name="FramePanel" type="Panel" parent="SlotsRoot/Slot2" unique_id=1528165254]
-z_index = 2
+z_index = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -249,12 +191,12 @@ expand_mode = 1
 [node name="LabelName" type="Label" parent="SlotsRoot/Slot2/FramePanel" unique_id=199164188]
 z_index = 2
 layout_mode = 0
-offset_left = 2.0
-offset_top = 187.0
-offset_right = 206.0
-offset_bottom = 211.0
-theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+offset_left = -3.966225
+offset_top = 195.71732
+offset_right = 98.98736
+offset_bottom = 219.71732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_mj6x0")
 theme_override_font_sizes/font_size = 18
 text = "Archivo 2"
 
@@ -315,12 +257,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Imagen20260530150921370RemovebgPreview3" type="Sprite2D" parent="SlotsRoot/Slot3/FramePanel" unique_id=279946948]
-z_index = 5
+z_index = 4
 position = Vector2(112.96982, 91.268616)
 scale = Vector2(0.38631108, 0.4220065)
 texture = ExtResource("7_remy1")
 
 [node name="PreviewRect" type="TextureRect" parent="SlotsRoot/Slot3/FramePanel" unique_id=278134010]
+z_index = 3
 layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
@@ -331,16 +274,17 @@ expand_mode = 1
 
 [node name="LabelName" type="Label" parent="SlotsRoot/Slot3/FramePanel" unique_id=1928176116]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 176.0
-offset_right = 210.0
-offset_bottom = 200.0
-theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+offset_left = 3.1223855
+offset_top = 185.69621
+offset_right = 127.17301
+offset_bottom = 209.69621
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_mj6x0")
 theme_override_font_sizes/font_size = 18
 text = "Archivo 3"
 
 [node name="LabelStatus" type="Label" parent="SlotsRoot/Slot3/FramePanel" unique_id=16706612]
+z_index = 4
 layout_mode = 0
 offset_left = 57.0
 offset_top = 74.0
@@ -414,8 +358,8 @@ offset_left = 4.0
 offset_top = 186.0
 offset_right = 208.0
 offset_bottom = 236.0
-theme_override_colors/font_color = Color(0.9, 0.9, 0.7, 1)
-theme_override_fonts/font = ExtResource("1_creepster")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_mj6x0")
 theme_override_font_sizes/font_size = 20
 text = "Opciones"
 
