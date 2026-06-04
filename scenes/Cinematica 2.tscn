@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cncl0tlbwemyd"]
+
+[ext_resource type="Script" uid="uid://du2k2canucmpq" path="res://scripts/cinematica_2.gd" id="1_m6qud"]
+[ext_resource type="VideoStream" uid="uid://b4vob3b6l1ld0" path="res://assets/cinematics/Cinematica-2 (1).ogv" id="2_m6qud"]
+[ext_resource type="AudioStream" uid="uid://bvbuur2f3gmbc" path="res://assets/audio/Cinematica2.wav" id="3_l0mtb"]
+
+[node name="Control" type="Control" unique_id=1884955227]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m6qud")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1609161431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_m6qud")
+expand = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1066789689]
+stream = ExtResource("3_l0mtb")

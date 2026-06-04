@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="LuigiMansion"
+run/main_scene="uid://beg5ss1kvx4uv"
+config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+TransitionManager="*res://scripts/transition_manager.gd"
+SlotContext="*uid://bpw06pi5eu0xb"
+PauseInput="*res://scripts/pause_input.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/destruction/plugin.cfg")

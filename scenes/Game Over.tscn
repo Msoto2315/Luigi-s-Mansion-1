@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dwwd25cbanscj"]
+
+[ext_resource type="VideoStream" uid="uid://ik1y0jau0e7c" path="res://assets/cinematics/Luigi_s-Mansion-_Game-Over_-Beta-_HD_.ogv" id="1_vlb8f"]
+
+[node name="Control" type="Control" unique_id=1760431442]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1445332224]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_vlb8f")
+expand = true

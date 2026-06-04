@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bo4eaj65i2742"]
+
+[ext_resource type="Shader" uid="uid://tn3ec8de48p" path="res://assets/shaders/fire_aurora_overlay.gdshader" id="1_c7yel"]
+
+[resource]
+render_priority = 40
+shader = ExtResource("1_c7yel")
+shader_parameter/speed = 0.5
+shader_parameter/intensity = 0.815
+shader_parameter/distortion = 15.0
+shader_parameter/glow = 2.8
+shader_parameter/fire_color = Color(1, 0.69411767, 0.03529412, 1)

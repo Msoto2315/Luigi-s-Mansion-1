@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b52m306eq0vfi"
+path="res://.godot/imported/File-Select-Luigi_s-Mansion-Music-_Extended_-Kirbyeatsyou (2).wav-3fdd243ad95a61e1591033245a333d80.sample"
+
+[deps]
+
+source_file="res://assets/audio/File-Select-Luigi_s-Mansion-Music-_Extended_-Kirbyeatsyou (2).wav"
+dest_files=["res://.godot/imported/File-Select-Luigi_s-Mansion-Music-_Extended_-Kirbyeatsyou (2).wav-3fdd243ad95a61e1591033245a333d80.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

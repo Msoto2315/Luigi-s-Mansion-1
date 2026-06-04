@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://b4nuf02ff23df"]
+
+[ext_resource type="Script" uid="uid://dtym1hdx7vidt" path="res://scripts/menu_pausa.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://bs22q4x1ej5ov" path="res://assets/fonts/Delfino.ttf" id="2_font"]
+[ext_resource type="Texture2D" uid="uid://bxcg55ieqxvod" path="res://assets/images/imagen_2026-06-04_004931233-removebg-preview.png" id="3_preview"]
+[ext_resource type="Texture2D" uid="uid://bvb772nyn1g4y" path="res://assets/images/imagen_2026-06-04_013305239-removebg-preview.png" id="4_ghost"]
+[ext_resource type="AudioStream" uid="uid://buwykbdhpv4md" path="res://assets/audio/lm_inventory-open.wav" id="5_select"]
+[ext_resource type="AudioStream" uid="uid://8x07d3eot6t7" path="res://assets/audio/Selector.wav" id="6_accept"]
+[ext_resource type="Texture2D" uid="uid://bkpjfsnwm2tcp" path="res://assets/images/menu_pausa_boo_selector-removebg-preview.png" id="7_a6xxm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Shadow"]
+bg_color = Color(0, 0, 0, 0.55)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.85)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Control"]
+bg_color = Color(0.01, 0.04, 0.06, 0.72)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.92, 0.96, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0.72, 0.82, 0.45)
+shadow_size = 10
+
+[node name="MenuPausa" type="Control" unique_id=232384459]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+metadata/_edit_lock_ = true
+
+[node name="BlackBackground" type="ColorRect" parent="." unique_id=770916368]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.005, 0.005, 0.006, 1)
+metadata/_edit_lock_ = true
+
+[node name="PreviewShadow" type="Panel" parent="." unique_id=352154279]
+z_index = 1000
+layout_mode = 0
+offset_left = 284.0
+offset_top = 99.0
+offset_right = 752.0
+offset_bottom = 367.0
+scale = Vector2(1.27, 1.27)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_Shadow")
+
+[node name="MansionPreview" type="TextureRect" parent="." unique_id=764521781]
+z_index = 1000
+layout_mode = 0
+offset_left = 270.00003
+offset_top = 84.00001
+offset_right = 789.0552
+offset_bottom = 367.55908
+scale = Vector2(1.27, 1.27)
+mouse_filter = 2
+texture = ExtResource("3_preview")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LeftControlBox" type="Panel" parent="." unique_id=237734739]
+z_index = 3
+layout_mode = 0
+offset_left = 76.0
+offset_top = 476.0
+offset_right = 296.0
+offset_bottom = 558.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_Control")
+
+[node name="LabelTitle" type="Label" parent="LeftControlBox" unique_id=1578451350]
+z_index = 1000
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 212.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.82, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "Modo de control:"
+horizontal_alignment = 1
+
+[node name="LabelMode" type="Label" parent="LeftControlBox" unique_id=634973755]
+z_index = 1000
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 212.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.86, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "Estándar"
+horizontal_alignment = 1
+
+[node name="RightControlText" type="Control" parent="." unique_id=376495752]
+z_index = 3
+anchors_preset = 0
+offset_left = 392.0
+offset_top = 358.0
+offset_right = 627.0
+offset_bottom = 440.0
+mouse_filter = 2
+
+[node name="LabelTitle" type="Label" parent="RightControlText" unique_id=1768376767]
+z_index = 1000
+layout_mode = 0
+offset_left = 466.0
+offset_top = 139.0
+offset_right = 701.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0.82, 0.78, 0.88, 0.92)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "Modo de control:"
+horizontal_alignment = 1
+
+[node name="LabelMode" type="Label" parent="RightControlText" unique_id=1298948186]
+z_index = 1000
+layout_mode = 0
+offset_left = 466.0
+offset_top = 171.0
+offset_right = 701.0
+offset_bottom = 217.0
+theme_override_colors/font_color = Color(0.82, 0.78, 0.88, 0.92)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+text = "Paso lateral"
+horizontal_alignment = 1
+
+[node name="MenuChoices" type="Control" parent="." unique_id=1289275401]
+z_index = 4
+anchors_preset = 0
+offset_left = 414.0
+offset_top = 462.0
+offset_right = 754.0
+offset_bottom = 592.0
+mouse_filter = 2
+
+[node name="GhostLeft" type="TextureRect" parent="MenuChoices" unique_id=1169684716]
+z_index = 1000
+layout_mode = 0
+offset_top = 7.0
+offset_right = 48.0
+offset_bottom = 57.0
+mouse_filter = 2
+texture = ExtResource("4_ghost")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GhostRight" type="TextureRect" parent="MenuChoices" unique_id=1967643754]
+z_index = 1000
+layout_mode = 0
+offset_left = 292.0
+offset_top = 7.0
+offset_right = 340.0
+offset_bottom = 57.0
+mouse_filter = 2
+texture = ExtResource("4_ghost")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="BtnContinue" type="Button" parent="MenuChoices" unique_id=1066446859]
+z_index = 1000
+layout_mode = 0
+offset_left = 58.0
+offset_right = 282.0
+offset_bottom = 58.0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 40
+text = "Continuar"
+flat = true
+
+[node name="BtnQuit" type="Button" parent="MenuChoices" unique_id=674871848]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 66.0
+offset_right = 250.0
+offset_bottom = 122.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.82, 0.78, 0.88, 0.75)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 38
+text = "Salir"
+flat = true
+
+[node name="AudioStreamPlayer2DSelect" type="AudioStreamPlayer2D" parent="." unique_id=1112944800]
+stream = ExtResource("5_select")
+volume_db = -7.5
+
+[node name="AudioStreamPlayer2DSelect2" type="AudioStreamPlayer2D" parent="." unique_id=1398811437]
+stream = ExtResource("6_accept")
+volume_db = -8.0
+
+[node name="MenuPausaBooSelectorRemovebgPreview" type="Sprite2D" parent="." unique_id=1110003000]
+position = Vector2(584.25, 64.00001)
+scale = Vector2(1.6203008, 1.4380165)
+texture = ExtResource("7_a6xxm")

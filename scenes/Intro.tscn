@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://beg5ss1kvx4uv"]
+
+[ext_resource type="Script" uid="uid://c65lauxjf2tg3" path="res://scripts/intro.gd" id="1_hc7eg"]
+[ext_resource type="VideoStream" uid="uid://3uloh6oj3roi" path="res://assets/cinematics/Intro.ogv" id="2_aqbct"]
+
+[node name="Control" type="Control" unique_id=168176032]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hc7eg")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1247783502]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -89.0
+offset_right = 2372.8198
+offset_bottom = 991.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.82, 0.82)
+stream = ExtResource("2_aqbct")

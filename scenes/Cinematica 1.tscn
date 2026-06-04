@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dbe1w8l54jhav"]
+
+[ext_resource type="VideoStream" uid="uid://c43q8djou6dd3" path="res://assets/cinematics/Cinematica-1 (1).ogv" id="2_d6ms6"]
+[ext_resource type="Script" uid="uid://c6sqxrwlly50" path="res://scripts/cinematica1.gd" id="2_script"]
+
+[node name="Control" type="Control" unique_id=295827097]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_script")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1661545463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_d6ms6")
+expand = true
